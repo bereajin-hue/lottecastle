@@ -12,19 +12,21 @@ export default function ComplexSection() {
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/40">Complex</p>
           <h2 className="mt-2 text-3xl font-bold md:text-4xl">단지소개</h2>
         </div>
-        <div className="mt-10">
+        <a href={complex.sitePlan.image} target="_blank" rel="noopener" className="mt-10 block">
           <SafeImage
             src={complex.sitePlan.image}
             alt={complex.sitePlan.alt}
             width={1920}
-            height={1200}
+            height={900}
             sizes="100vw"
-            className="h-[320px] max-h-[700px] w-full object-cover sm:h-[500px] md:h-[700px]"
+            placeholderClassName="bg-gray-800 h-[320px] md:h-[700px]"
+            className="mx-auto h-auto max-h-[700px] w-full object-contain"
           />
-        </div>
+        </a>
         <p className="mt-6 px-4 text-center text-base font-medium tracking-wide text-white/80 md:text-lg">
           APT 10개동 · 총 1,249세대 · 지하10층~최고26층
         </p>
+        <p className="mt-2 text-center text-xs text-white/40 md:hidden">이미지를 누르면 크게 볼 수 있습니다</p>
       </div>
 
       {/* 2. 커뮤니티 층별 안내 */}
@@ -51,19 +53,20 @@ export default function ComplexSection() {
         </div>
       </div>
 
-      {/* 3. 인도어 골프장 */}
-      <div className="relative bg-ink">
+      {/* 3. 인도어 골프장 — 초광폭(1920×500) 이미지라 자르지 않고 전체 노출 */}
+      <div className="bg-ink pb-12 md:pb-16">
         <SafeImage
           src={complex.golf.image}
           alt={complex.golf.alt}
           width={1920}
-          height={1080}
+          height={500}
           sizes="100vw"
-          className="h-[360px] max-h-[600px] w-full object-cover md:h-[600px]"
+          placeholderClassName="bg-gray-800 h-[200px] md:h-[400px]"
+          className="h-auto w-full"
         />
-        <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 md:p-14">
+        <div className="mx-auto max-w-7xl px-4 pt-8 md:px-8 md:pt-10">
           <h3 className="text-2xl font-bold md:text-4xl">경기광주 유일 · 단지 내 실내 인도어 골프장</h3>
-          <p className="mt-2 text-sm text-gray-300 md:text-lg">
+          <p className="mt-2 text-sm text-gray-400 md:text-lg">
             실내 스크린골프 + 실제 퍼팅그린 + 인도어 골프연습장 3종 완비
           </p>
         </div>
@@ -90,10 +93,10 @@ export default function ComplexSection() {
         <SafeImage
           src={complex.interior.image}
           alt={complex.interior.alt}
-          width={1920}
-          height={1080}
+          width={1280}
+          height={720}
           sizes="100vw"
-          className="h-[360px] max-h-[600px] w-full object-cover md:h-[600px]"
+          className="aspect-video w-full object-cover md:aspect-auto md:h-[600px]"
         />
         <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 to-transparent p-6 md:p-14">
           <p className="text-xs uppercase tracking-[0.3em] text-white/60">Interior</p>
@@ -101,17 +104,18 @@ export default function ComplexSection() {
         </div>
       </div>
 
-      {/* 6. 쌍령공원 */}
-      <div className="relative bg-ink">
+      {/* 6. 쌍령공원 — 이미지 내 라벨·캡션이 가려지지 않도록 텍스트는 하단 배치 */}
+      <div className="bg-[#1A3A2F] pb-12 md:pb-20">
         <SafeImage
           src={complex.park.image}
           alt={complex.park.alt}
           width={1920}
-          height={1080}
+          height={900}
           sizes="100vw"
-          className="h-[360px] max-h-[600px] w-full object-cover md:h-[600px]"
+          placeholderClassName="bg-gray-800 h-[300px] md:h-[600px]"
+          className="h-auto w-full"
         />
-        <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[#1A3A2F]/90 via-black/20 to-transparent p-6 md:p-14">
+        <div className="mx-auto max-w-7xl px-4 pt-8 md:px-8 md:pt-10">
           <h3 className="text-2xl font-bold md:text-4xl">51만㎡ 쌍령공원 — 단 한걸음</h3>
           <p className="mt-2 text-sm text-gray-200 md:text-lg">
             세계적 건축가 리차드 마이어 참여 · 꿈자람센터(CDC) · 동심생태과학관(CEM)
