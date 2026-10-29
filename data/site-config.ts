@@ -210,6 +210,5 @@ export const siteConfig = {
     phone: "1599-1877",
     telLink: "tel:15991877",
     label: "분양 문의 · 방문 예약",
-    formspreeEndpoint: "https://formspree.io/f/XXXXXXXX",  // Formspree 설정 후 교체
   },
 };

@@ -8,6 +8,16 @@ const { slides } = siteConfig.hero
 
 export default function HeroBanner() {
   const [current, setCurrent] = useState(0)
+  const [atContact, setAtContact] = useState(false)
+
+  // 방문예약 섹션에서는 큰 전화 버튼과 겹치지 않도록 하단 고정 CTA 숨김
+  useEffect(() => {
+    const target = document.getElementById('contact')
+    if (!target) return
+    const io = new IntersectionObserver(([entry]) => setAtContact(entry.isIntersecting), { threshold: 0.2 })
+    io.observe(target)
+    return () => io.disconnect()
+  }, [])
 
   useEffect(() => {
     const id = setInterval(() => setCurrent((c) => (c + 1) % slides.length), 5000)
@@ -66,7 +76,11 @@ export default function HeroBanner() {
 
       <a
         href="#contact"
-        className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2 whitespace-nowrap rounded-full bg-gold px-7 py-3.5 text-base font-bold text-navy shadow-xl shadow-black/40 transition hover:scale-105 md:bottom-8 md:text-lg"
+        aria-hidden={atContact}
+        tabIndex={atContact ? -1 : undefined}
+        className={`fixed bottom-4 left-1/2 z-40 -translate-x-1/2 whitespace-nowrap rounded-full bg-gold px-7 py-3.5 text-base font-bold text-navy shadow-xl shadow-black/40 transition duration-300 hover:scale-105 md:bottom-8 md:text-lg ${
+          atContact ? 'pointer-events-none translate-y-6 opacity-0' : ''
+        }`}
       >
         📞 {siteConfig.contact.phone} 상담 문의
       </a>
