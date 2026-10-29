@@ -11,14 +11,16 @@ export default function LocationSection() {
         <h2 className="mt-2 text-3xl font-bold md:text-4xl">입지안내</h2>
       </div>
 
-      <div className="mt-10 w-full">
+      {/* 입지도는 라벨이 잘리지 않도록 전체 노출 (object-contain) */}
+      <div className="mt-10 w-full bg-white">
         <SafeImage
           src={location.image}
           alt={location.alt}
           width={1920}
           height={1080}
           sizes="100vw"
-          className="h-[300px] max-h-[600px] w-full object-cover sm:h-[450px] md:h-[600px]"
+          placeholderClassName="bg-gray-800 h-[300px] md:h-[600px]"
+          className="mx-auto h-auto max-h-[600px] w-full object-contain"
         />
       </div>
 
