@@ -11,6 +11,7 @@ export const siteConfig = {
     ogImage: "/og-image.jpg",
     naverVerification: "",   // 서치어드바이저 등록 후 입력
     googleVerification: "",  // 서치콘솔 등록 후 입력
+    googleAdsId: "AW-16892632421",  // 구글 광고 전환추적 태그 (gtag.js)
   },
 
   // ─── 헤더 ──────────────────────────────────────────────
