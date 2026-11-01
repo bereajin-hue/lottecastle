@@ -99,7 +99,7 @@ export const siteConfig = {
   header: {
     logo: "/logo.png",
     projectName: "롯데캐슬 시그니처",
-    phone: "1599-1877",
+    phone: "1599-",
     gnb: ["사업개요", "입지안내", "단지소개", "평형안내", "방문예약"],
   },
 
@@ -289,8 +289,8 @@ export const siteConfig = {
 
   // ─── 방문예약 ───────────────────────────────────────────
   contact: {
-    phone: "1599-1877",
-    telLink: "tel:15991877",
+    phone: "1599-",
+    telLink: "tel:1599",
     label: "분양 문의 · 방문 예약",
     formspreeEndpoint: "https://formspree.io/f/XXXXXXXX",  // Formspree 설정 후 교체
   },
@@ -320,7 +320,7 @@ canonical:    https://lottecastle.aptmh.kr
 - 반투명 다크 오버레이 `rgba(0,0,0,0.45)`
 - 중앙 텍스트: H1 타이틀(흰색 굵게) + 서브타이틀(흰색)
 - 우하단 슬라이드 인디케이터 도트
-- 하단 고정 CTA: `📞 1599-1877 상담 문의` → #contact 앵커
+- 하단 고정 CTA: `📞 1599- 상담 문의` → #contact 앵커
 
 ---
 
@@ -422,7 +422,7 @@ canonical:    https://lottecastle.aptmh.kr
 
 **전화 영역:**
 ```
-📞 1599-1877
+📞 1599-
 [전화 상담 바로하기]  ← tel: 링크, 모바일 터치 시 바로 전화
 골드(#E8B84B) 버튼, 패딩 넉넉하게
 ```
@@ -505,7 +505,7 @@ layout.tsx에 다음 메타태그 모두 삽입:
       "addressRegion": "경기도",
       "addressCountry": "KR"
     },
-    "telephone": "1599-1877",
+    "telephone": "1599-",
     "url": "https://lottecastle.aptmh.kr"
   }
 - 모든 img에 alt 속성 (한글 키워드 포함)
@@ -525,7 +525,7 @@ layout.tsx에 다음 메타태그 모두 삽입:
 - 이미지 위 반투명 다크 오버레이 (rgba(0,0,0,0.45))
 - 중앙 텍스트: H1 타이틀(흰색 굵게) + 서브타이틀(흰색)
 - 우하단 인디케이터 도트
-- 하단 고정 CTA 버튼: "📞 1599-1877 상담 문의" → #contact 앵커
+- 하단 고정 CTA 버튼: "📞 1599- 상담 문의" → #contact 앵커
 - 이미지 없으면 placeholder bg-gray-800 처리
 
 ### BusinessSection.tsx (id="business")
@@ -609,8 +609,8 @@ H2: "단지소개" (흰색)
 
 좌측 전화:
   안내 문구: "지금 바로 전화 상담하세요" (회색)
-  <a href="tel:15991877">
-    📞 1599-1877 전화 상담 바로하기
+  <a href="tel:1599">
+    📞 1599- 전화 상담 바로하기
   배경 골드(#E8B84B), 텍스트 다크(#0D1B2A), 패딩 충분히, 그림자
 
 우측 방문예약 폼 (Formspree):
